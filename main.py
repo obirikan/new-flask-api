@@ -14,7 +14,7 @@ def post_details():
     data = request.json
     mine=[data['name']]
     mine=np.array(mine)
-    savedmodel=open('heartprediction.pickle' ,'rb')
+    savedmodel=open('heartprediction.pickle' , 'rb')
     newmodel=pickle.load(savedmodel)
 
 
