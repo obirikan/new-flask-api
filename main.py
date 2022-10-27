@@ -14,7 +14,7 @@ def post_details():
     data = request.json
     mine=[data['name']]
     mine=np.array(mine)
-    savedmodel=open('heartprediction.pickle', 'rb')
+    savedmodel=open('heartprediction.pickle','rb')
     newmodel=pickle.load(savedmodel)
 
 
@@ -22,7 +22,7 @@ def post_details():
     
     #predict the outcome of your value(s)
     predicted=newmodel.predict(mine)
-    names=['absense','presence']
+    names=['Absense','Presence']
     
 #loop through prediction to see if your data is corresponding well
     for x in range(len(predicted)):
