@@ -9,6 +9,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route('/get',methods =['POST'])
 def post_details():
     data = request.json
@@ -19,7 +20,6 @@ def post_details():
 
 
     myvalues=[[20, 0 ,3, 100 ,100,0,1,100]]
-    
     #predict the outcome of your value(s)
     predicted=newmodel.predict(mine)
     names=['Absense','Presence']
